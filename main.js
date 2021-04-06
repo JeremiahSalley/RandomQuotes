@@ -1,5 +1,7 @@
 const quoteButton = document.getElementById('quoteButton')
 const quoteButton1 = document.getElementById('quoteButton1')
+const quoteButton2 = document.getElementById('quoteButton2')
+const quoteButton3 = document.getElementById('quoteButton3')
 const close = document.getElementById('close')
 const modalContainer = document.getElementById('modalContainer')
 
@@ -30,6 +32,31 @@ const motivationalQuotes = [
     '“Whatever you are, be a good one.” ― Abraham Lincoln',
 ]
 
+const hustleQuotes = [
+    '“No one is to blame for your future situation but yourself. If you want to be successful, then become “Successful.”― Jaymin Shah',
+    '“Things may come to those who wait, but only the things left by those who hustle.”― Abraham Lincoln',
+    '“Everything comes to him who hustles while he waits.”― Thomas Edison',
+    '“Every sucessful person in the world is a hustler one way or another. We all hustle to get where we need to be. Only a fool would sit around and wait on another man to feed him.” ― K’wan',
+    '“Invest in your dreams. Grind now. Shine later.”',
+    '“Hustlers don’t sleep, they nap.”',
+    '“Greatness only comes before hustle in the dictionary.” – Ross Simmonds',
+    '“Without hustle, talent will only carry you so far.” – Gary Vaynerchuk',
+    '“Work like there is someone working twenty four hours a day to take it away from you.” – Mark Cuban',
+    '“Hustle in silence and let your success make the noise.”',
+]
+const successQuotes = [
+    '“Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.” – Pele',
+    '“Would you like me to give you a formula for success? It’s quite simple, really: Double your rate of failure. You are thinking of failure as the enemy of success. But it isn’t at all. You can be discouraged by failure or you can learn from it, so go ahead and make mistakes. Make all you can. Because remember that’s where you will find success.” – Thomas J. Watson',
+    '“Every champion was once a contender that didn’t give up.” – Gabby Douglas',
+    '“To be a champion, I think you have to see the big picture. It’s not about winning and losing; it’s about every day hard work and about thriving on a challenge. It’s about embracing the pain that you’ll experience at the end of a race and not being afraid. I think people think too hard and get afraid of a certain challenge.” – Summer Sanders',
+    'Don’t dream about success. Get out there and work for it.',
+    '“The difference between successful people and very successful people is that very successful people say ‘no’ to almost everything.” – Warren Buffett',
+    'You can cry, scream, and bang your head in frustration but keep pushing forward. It’s worth it.',
+    '“I hated every minute of training, but I said, ‘Don’t quit. Suffer now and live the rest of your life as a champion.” – Muhammad Ali',
+    '“Opportunities don’t happen. You create them.” – Chris Grosser',
+    '“Success is liking yourself, liking what you do, and liking how you do it.” – Maya Angelou',
+] 
+
 
 quoteButton.addEventListener('click', ()=>{
     modalContainer.classList.add('show')
@@ -43,6 +70,19 @@ quoteButton1.addEventListener('click', ()=>{
     document.getElementById('quoteDisplay').innerHTML = motivationalQuotes[randomMotivational]
 })
 
+quoteButton2.addEventListener('click', ()=>{
+    modalContainer.classList.add('show')
+    let randomHustle = Math.floor(Math.random() * (hustleQuotes.length))
+    document.getElementById('quoteDisplay').innerHTML = hustleQuotes[randomHustle]
+})
+
+quoteButton3.addEventListener('click', ()=>{
+    modalContainer.classList.add('show')
+    let randomSuccess = Math.floor(Math.random() * (successQuotes.length))
+    document.getElementById('quoteDisplay').innerHTML = successQuotes[randomSuccess]
+})
+
 close.addEventListener('click', () =>{
     modalContainer.classList.remove('show')
 })
+
